@@ -3,6 +3,7 @@ package seedu.malitio.model;
 import javafx.collections.ObservableList;
 import seedu.malitio.model.tag.Tag;
 import seedu.malitio.model.tag.UniqueTagList;
+import seedu.malitio.model.task.Deadlines;
 import seedu.malitio.model.task.FloatingTask;
 import seedu.malitio.model.task.ReadOnlyTask;
 import seedu.malitio.model.task.Task;
@@ -71,7 +72,7 @@ public class Malitio implements ReadOnlyMalitio {
 
     public void resetData(Collection<? extends ReadOnlyTask> newTasks, Collection<? extends ReadOnlyTask> newTasks2, Collection<Tag> newTags) {
         setTasks(newTasks.stream().map(FloatingTask::new).collect(Collectors.toList()));
-        setTasks(newTasks2.stream().map(FloatingTask::new).collect(Collectors.toList()));
+        setTasks2(newTasks2.stream().map(Deadlines::new).collect(Collectors.toList()));
         setTags(newTags);
     }
 
@@ -90,20 +91,14 @@ public class Malitio implements ReadOnlyMalitio {
      */
     public void addTask(Task p) throws UniqueTaskList.DuplicateTaskException {
         syncTagsWithMasterList(p);
-        tasks.add(p);
-    }
+        
+        if(p instanceof FloatingTask) {
+            tasks.add(p);
+        } else {
+            tasks2.add(p);
+        }
+        }
     
-    /**
-     * Adds a task to Malitio.
-     * Also checks the new task's tags and updates {@link #tags} with any new tags found,
-     * and updates the Tag objects in the task to point to those in {@link #tags}.
-     *
-     * @throws UniqueTaskList.DuplicateTaskException if an equivalent task already exists.
-     */
-    public void addTask2(Task p) throws UniqueTaskList.DuplicateTaskException {
-        syncTagsWithMasterList(p);
-        tasks2.add(p);
-    }
 
     /**
      * Ensures that every tag in this task:
@@ -165,7 +160,7 @@ public class Malitio implements ReadOnlyMalitio {
     
     @Override
     public List<ReadOnlyTask> getTaskList2() {
-        return Collections.unmodifiableList(tasks.getInternalList());
+        return Collections.unmodifiableList(tasks2.getInternalList());
     }
 
     @Override

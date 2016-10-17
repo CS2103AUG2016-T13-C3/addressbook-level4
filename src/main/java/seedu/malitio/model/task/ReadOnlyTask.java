@@ -9,7 +9,9 @@ import seedu.malitio.model.tag.UniqueTagList;
 public interface ReadOnlyTask {
 
     Name getName();
-
+    DateTime getDueDate();
+    DateTime getStartDate();
+    DateTime getEndDate();
 
     /**
      * The returned TagList is a deep copy of the internal TagList,

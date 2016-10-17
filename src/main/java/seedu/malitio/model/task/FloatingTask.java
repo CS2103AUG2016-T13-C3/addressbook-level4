@@ -13,4 +13,19 @@ public class FloatingTask extends Task implements ReadOnlyTask {
         this(source.getName(), source.getTags());
     }
 
+    @Override
+    public DateTime getDueDate() {
+        return null;
+    }
+
+    @Override
+    public DateTime getStartDate() {
+        return null;
+    }
+
+    @Override
+    public DateTime getEndDate() {
+        return null;
+    }
+
 }

@@ -23,4 +23,19 @@ public class Events extends Task {
         super(source);
     }
 
+    @Override
+    public DateTime getDueDate() {
+        return null;
+    }
+
+    @Override
+    public DateTime getStartDate() {
+        return start;
+    }
+
+    @Override
+    public DateTime getEndDate() {
+        return end;
+    }
+
 }

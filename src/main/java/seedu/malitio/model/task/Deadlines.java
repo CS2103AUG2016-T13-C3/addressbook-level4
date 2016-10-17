@@ -19,4 +19,19 @@ public class Deadlines extends Task {
         super(source);
     }
 
+    @Override
+    public DateTime getDueDate() {
+        return due;
+    }
+
+    @Override
+    public DateTime getStartDate() {
+        return null;
+    }
+
+    @Override
+    public DateTime getEndDate() {
+        return null;
+    }
+
 }

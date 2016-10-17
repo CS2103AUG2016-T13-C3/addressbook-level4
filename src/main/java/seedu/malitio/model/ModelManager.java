@@ -76,10 +76,8 @@ public class ModelManager extends ComponentManager implements Model {
 
     @Override
     public synchronized void addTask(Task task) throws UniqueTaskList.DuplicateTaskException {
-    	if (task instanceof FloatingTask)
-    		malitio.addTask(task);
-    	else
-    		malitio.addTask2(task);
+    	malitio.addTask(task);
+
         updateFilteredListToShowAll();
         updateFilteredScheduleToShowAll();
         indicatemalitioChanged();

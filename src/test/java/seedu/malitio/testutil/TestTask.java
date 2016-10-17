@@ -70,4 +70,22 @@ public class TestTask implements ReadOnlyTask {
         this.end = end;
     }
 
+    @Override
+    public DateTime getDueDate() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public DateTime getStartDate() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public DateTime getEndDate() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }
