@@ -52,4 +52,12 @@ public class DateTime {
         String newDateString = df.format(date);
         return newDateString;
     }
+    
+    public Date getDate() {
+        return date;
+    }
+    
+    public boolean isAfter(DateTime date) {
+        return this.date.after(date.getDate());
+    }
 }
