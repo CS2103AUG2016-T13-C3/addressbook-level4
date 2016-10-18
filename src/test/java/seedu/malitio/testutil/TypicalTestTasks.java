@@ -9,24 +9,24 @@ import seedu.malitio.model.task.*;
  */
 public class TypicalTestTasks {
 
-    public static TestTask sleep, eat, read, exercise, lecture, homework, play, relax, prepare, test;
+    public static TestTask floatingTask1, floatingTask2, deadline1, deadline2, event1, event2, event3, event4, manualFloatingTask, manualDeadline;
 
     public TypicalTestTasks() {
         try {
-            sleep =  new TaskBuilder().withName("sleep")
-                    .withTags("early").build();
-            eat = new TaskBuilder().withName("eat lunch")
-                    .withTags("11am", "friends").build();
-            read = new TaskBuilder().withName("read book").build();
-            exercise = new TaskBuilder().withName("exercise in gym").build();
-            lecture = new TaskBuilder().withName("cs2103 lecture").build();
-            homework = new TaskBuilder().withName("cs2103 homework").build();
-            play = new TaskBuilder().withName("play basketball").build();
-            test = new TaskBuilder().withName("test").dueOn("11012015 0006").build();
+            floatingTask1 =  new TaskBuilder().withName("adjust meter")
+                    .withTags("careful").build();
+            floatingTask2 = new TaskBuilder().withName("bring along notes")
+                    .withTags("pen", "cs2103").build();
+            deadline1 = new TaskBuilder().withName("copy answer").dueOn("11012015 0006").build();
+            deadline2 = new TaskBuilder().withName("do some sit-up").dueOn("11042016 0000").build();
+            event1 = new TaskBuilder().withName("eat with mom").start("10072016 1250").end("10072016 1500").build();
+            event2 = new TaskBuilder().withName("forgive and forget").start("01072016 1250").end("12122016 0600").build();
+            event3 = new TaskBuilder().withName("go shopping").start("11052016 1250").end("11052016 1500").build();
+            event4 = new TaskBuilder().withName("hopping").start("31062016 1250").end("13072016 1500").build();
 
             //Manually added
-            relax = new TaskBuilder().withName("spa relaxation").build();
-            prepare = new TaskBuilder().withName("prepare for interview").build();
+            manualFloatingTask = new TaskBuilder().withName("spa relaxation").build();
+            manualDeadline = new TaskBuilder().withName("prepare for interview").build();
         } catch (IllegalValueException e) {
             e.printStackTrace();
             assert false : "not possible";
@@ -36,20 +36,20 @@ public class TypicalTestTasks {
     public static void loadmalitioWithSampleData(Malitio ab) {
 
         try {
-            ab.addTask(new FloatingTask(sleep));
-            ab.addTask(new FloatingTask(eat));
-            ab.addTask(new FloatingTask(read));
-            ab.addTask(new FloatingTask(exercise));
-            ab.addTask(new FloatingTask(lecture));
-            ab.addTask(new FloatingTask(homework));
-            ab.addTask(new FloatingTask(play));
+            ab.addTask(new FloatingTask(floatingTask1));
+            ab.addTask(new FloatingTask(floatingTask2));
+            ab.addTask(new FloatingTask(deadline1));
+            ab.addTask(new FloatingTask(deadline2));
+            ab.addTask(new FloatingTask(event1));
+            ab.addTask(new FloatingTask(event2));
+            ab.addTask(new FloatingTask(event3));
         } catch (UniqueTaskList.DuplicateTaskException e) {
             assert false : "not possible";
         }
     }
 
     public TestTask[] getTypicalTasks() {
-        return new TestTask[]{sleep, eat, read, exercise, lecture, homework, play};
+        return new TestTask[]{floatingTask1, floatingTask2, deadline1, deadline2, event1, event2, event3};
     }
 
     public Malitio getTypicalMalitio(){
