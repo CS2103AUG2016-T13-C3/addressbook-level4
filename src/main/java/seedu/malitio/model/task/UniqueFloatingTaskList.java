@@ -33,6 +33,8 @@ public class UniqueFloatingTaskList implements Iterable<FloatingTask> {
      * there is no such matching task in the list.
      */
     public static class FloatingTaskNotFoundException extends Exception {}
+    
+    public static class FloatingTaskCompletedException extends Exception {}
 
     private final ObservableList<FloatingTask> internalList = FXCollections.observableArrayList();
 
@@ -101,6 +103,25 @@ public class UniqueFloatingTaskList implements Iterable<FloatingTask> {
         internalList.remove(beforeEdit);
         internalList.add(indexToReplace, edited);
     }
+    
+    public void complete(ReadOnlyFloatingTask toComplete) throws FloatingTaskCompletedException, FloatingTaskNotFoundException {
+        assert toComplete != null;
+        if (toComplete.getCompleted()) {
+            throw new FloatingTaskCompletedException();
+        }
+        
+        if (!contains(toComplete)) {
+            throw new FloatingTaskNotFoundException();
+        }
+        toComplete.setCompleted();
+        updateFloatingTaskList(toComplete);
+    }
+
+	private void updateFloatingTaskList(ReadOnlyFloatingTask toComplete) {
+		int indexToReplace = internalList.indexOf(toComplete);
+        internalList.remove(toComplete);
+        internalList.add(indexToReplace, (FloatingTask) toComplete);
+	}
 
     /**
      * Removes the equivalent task from the list.

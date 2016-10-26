@@ -8,6 +8,7 @@ import seedu.malitio.model.tag.UniqueTagList;
 public class FloatingTask implements ReadOnlyFloatingTask {
 
     private Name name;
+    private Boolean completed;
     
     private UniqueTagList tags;
     
@@ -19,6 +20,14 @@ public class FloatingTask implements ReadOnlyFloatingTask {
         assert !CollectionUtil.isAnyNull(name, tags);
         this.name = name;
         this.tags = new UniqueTagList(tags); // protect internal tags from changes in the arg list
+        this.completed = false;
+    }
+    
+    public FloatingTask(Name name, Boolean completed, UniqueTagList tags) {
+        assert !CollectionUtil.isAnyNull(name, tags);
+        this.name = name;
+        this.completed = completed;
+        this.tags = new UniqueTagList(tags); // protect internal tags from changes in the arg list
     }
 
     /**
@@ -26,6 +35,7 @@ public class FloatingTask implements ReadOnlyFloatingTask {
      */
     public FloatingTask(ReadOnlyFloatingTask source) {
         this(source.getName(), source.getTags());
+        this.completed = source.getCompleted();
     }
 
     @Override
@@ -34,7 +44,15 @@ public class FloatingTask implements ReadOnlyFloatingTask {
     }
 
 
-    @Override
+    public boolean getCompleted() {
+		return this.completed;
+	}
+
+	public void setCompleted() {
+		this.completed = true;
+	}
+
+	@Override
     public UniqueTagList getTags() {
         return new UniqueTagList(tags);
     }
