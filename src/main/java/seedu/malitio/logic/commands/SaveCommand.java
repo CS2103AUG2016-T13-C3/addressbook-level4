@@ -32,22 +32,22 @@ public class SaveCommand extends Command {
 
     public static final String MESSAGE_SAVE_SUCCESSFUL = "Malitio data will be saved in %s from now onwards.";
     
-    public static final String MESSAGE_INVALID_DIRECTORY = "The directory is invalid! Valid file paths must end with '/' and cannot contain '\'\nExample: ";
+    public static final String MESSAGE_INVALID_DIRECTORY = "The directory is invalid! Valid file paths  cannot contain '\\'\nExample: ";
     
     public static final String FILE_PATH_IDENTIFIER = "/";
     
-    private final String dataFilePath;
+    private String dataFilePath;
     
     /**
      * Initialises dataFilePath to the input if the input ends with '/', else set dataFilePath to null
      * 
      */
     public SaveCommand(String dataFilePath) {
-        if(dataFilePath.endsWith(FILE_PATH_IDENTIFIER)) {
-            this.dataFilePath = StringUtil.removeSlashesAtBeginningOfString(dataFilePath) + Config.DEFAULT_FILE_NAME;
-        } else {
-            this.dataFilePath = null;
-        }
+        if (!dataFilePath.endsWith(FILE_PATH_IDENTIFIER)) {
+            this.dataFilePath = dataFilePath + FILE_PATH_IDENTIFIER; 
+        }        
+            this.dataFilePath = this.dataFilePath + Config.DEFAULT_FILE_NAME;
+        
     }
     
     @Override
@@ -74,7 +74,7 @@ public class SaveCommand extends Command {
         File file = new File(dataFilePath);
         try {
         if(!FileUtil.createFile(file)) {
-            logger.warning("File already exists");
+            logger.warning("File already exists. Overwriting...");
         }
             return true;
         } catch (IOException e) {
