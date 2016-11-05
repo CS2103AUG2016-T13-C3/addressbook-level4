@@ -56,14 +56,14 @@ public class MainApp extends Application {
         initLogging(config);
 
         model = initModelManager(storage, userPrefs);
-        
-        updateModel();
-        
+                
         logic = new LogicManager(model, storage);
 
         ui = new UiManager(logic, config, userPrefs);
 
         initEventsCenter();
+        
+        updateModel();
     }
     
     //@@author A0122460W
@@ -71,6 +71,7 @@ public class MainApp extends Application {
      * update to show relevant deadline and events past current time and date
      */
 	private void updateModel() {
+		logger.info("update malitio to current date and time");
 		model.updateFilteredDeadlineListToShowAll();
         model.updateFilteredEventListToShowAll();
         model.updateFilteredTaskListToShowAll();
