@@ -160,6 +160,7 @@ public class ModelManager extends ComponentManager implements Model {
         malitio.markTask(taskToMark);
         history.add(new InputMarkHistory(taskToMark));
         updateAllListToShowAll();
+        indicateMalitioChanged();
         indicateTaskListChanged(taskToMark);
     }
 
@@ -169,6 +170,7 @@ public class ModelManager extends ComponentManager implements Model {
         malitio.unmarkTask(taskToUnmark);
         history.add(new InputUnmarkHistory(taskToUnmark));
         updateAllListToShowAll();
+        indicateMalitioChanged();
         indicateTaskListChanged(taskToUnmark);
     }
 
