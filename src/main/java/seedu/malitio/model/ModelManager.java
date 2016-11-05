@@ -315,6 +315,10 @@ public class ModelManager extends ComponentManager implements Model {
         return new UnmodifiableObservableList<>(filteredEvents);
     }
     
+    //@@author A0122460W
+    /**
+     * showing all task from the beginning of time
+     */
 	@Override
 	public void ShowAllTask() {
 		filteredFloatingTasks.setPredicate(null);
@@ -322,21 +326,30 @@ public class ModelManager extends ComponentManager implements Model {
         filteredEvents.setPredicate(null);
 	}
     
+	//@@author
     @Override
     public void updateFilteredTaskListToShowAll() {
         filteredFloatingTasks.setPredicate(null);
     }
 
+    //@@author A0122460W
+    /**
+     * only show deadlines that are after the current time.
+     */
     @Override
     public void updateFilteredDeadlineListToShowAll() {
         filteredDeadlines.setPredicate(p->!p.getCompleted() || p.getDue().compareTo(new Date())>0);
     }
-
+    
+    /**
+     * only show events with end time that that is after the current time.
+     */
     @Override
     public void updateFilteredEventListToShowAll() {
         filteredEvents.setPredicate(p ->p.getEnd().compareTo(new Date())>0);
     }
 
+    //@@author
     @Override
     public void updateFilteredTaskList(Set<String> keywords){
         updateFilteredTaskList(new PredicateExpression(new NameQualifier(keywords)));

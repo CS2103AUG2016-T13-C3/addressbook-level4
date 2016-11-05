@@ -42,6 +42,7 @@ public class DeadlineCard extends UiPart{
 
     @FXML
     public void initialize() {
+    	//@@author A0122460W
     	if (deadline.getCompleted()){
     		name.setText(deadline.getName().fullName);
     		id.setStyle("-fx-text-fill: gray;");
@@ -53,17 +54,20 @@ public class DeadlineCard extends UiPart{
     		name.setText(deadline.getName().fullName);
     	}
     	
+    	//@@author
     	if (deadline.isMarked()) {
     	    cardPane2.setStyle("-fx-background-color: yellow;");
     	} else {
     	    cardPane2.setStyle("-fx-background-color: white;");
     	}
     	
+    	//@@author A0122460W
     	if (deadline.getDue().compareTo(new Date())<0 && !deadline.getCompleted()){
     		name.setText(deadline.getName().fullName);
     		cardPane2.setStyle("-fx-background-color: red;");
     	}
     	
+    	//@@author
         id.setText("D" + displayedIndex + ". ");
         due.setText("Due: "+ deadline.getDue().toString());
         tags.setText(deadline.tagsString());

@@ -35,6 +35,7 @@ public class FloatingTaskCard extends UiPart{
 
     @FXML
     public void initialize() {
+    	//@@author A0122460W
     	if (task.getCompleted()){
     		name.setText(task.getName().fullName);
     		name.setStyle("-fx-text-fill: gray;");
@@ -45,6 +46,7 @@ public class FloatingTaskCard extends UiPart{
     		name.setText(task.getName().fullName);
     	}
     	
+    	//@@author 
     	if (task.isMarked()) {
     	    cardPane.setStyle("-fx-background-color: yellow;");
     	} else {

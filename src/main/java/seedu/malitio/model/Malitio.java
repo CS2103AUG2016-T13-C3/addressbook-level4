@@ -291,6 +291,15 @@ public class Malitio implements ReadOnlyMalitio {
     }
     
     //@@author A0122460W
+    /**
+     * Checks for the task type of the task and change the completed attribute in task to be true
+     * 
+     * @param taskToComplete
+     * @throws FloatingTaskCompletedException
+     * @throws FloatingTaskNotFoundException
+     * @throws DeadlineCompletedException
+     * @throws DeadlineNotFoundException
+     */
     public void completeTask(Object taskToComplete) throws FloatingTaskCompletedException, 
     FloatingTaskNotFoundException, DeadlineCompletedException, DeadlineNotFoundException {
         if (isFloatingTask(taskToComplete)) {
@@ -300,6 +309,15 @@ public class Malitio implements ReadOnlyMalitio {
         }        
     }
     
+    /**
+     * Checks for the task type of the task and change the completed attribute in task to be false
+     * 
+     * @param taskToUncomplete
+     * @throws FloatingTaskUncompletedException
+     * @throws FloatingTaskNotFoundException
+     * @throws DeadlineUncompletedException
+     * @throws DeadlineNotFoundException
+     */
     public void uncompleteTask(Object taskToUncomplete) throws FloatingTaskUncompletedException, 
     FloatingTaskNotFoundException, DeadlineUncompletedException, DeadlineNotFoundException {
         if (isFloatingTask(taskToUncomplete)) {

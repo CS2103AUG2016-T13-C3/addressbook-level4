@@ -52,9 +52,11 @@ public class MainWindow extends UiPart {
     @FXML
     private MenuItem helpMenuItem;
     
+    //@@author A0122460W
     @FXML
     private MenuItem clearCommandBoxMenuItem;
 
+    //@@author
     @FXML
     private AnchorPane taskListPanelPlaceholder;
     
@@ -116,9 +118,11 @@ public class MainWindow extends UiPart {
 
     private void setAccelerators() {
         helpMenuItem.setAccelerator(KeyCombination.valueOf("F1"));
+        //@@author A0122460W
         clearCommandBoxMenuItem.setAccelerator(KeyCombination.valueOf("ESC"));
     }
 
+    //@@author
     void fillInnerParts() {
         taskListPanel = FloatingTaskListPanel.load(primaryStage, getTaskListPanelPlaceholder(), logic.getFilteredFloatingTaskList());
         deadlineListPanel = DeadlineListPanel.load(primaryStage, getDeadlineListPanelPlaceholder(), logic.getFilteredDeadlineList());
@@ -203,11 +207,13 @@ public class MainWindow extends UiPart {
         raise(new ExitAppRequestEvent());
     }
     
+    //@@author A0122460W
     @FXML
     private void clearCommandBox() {
         commandBox.clearCommandBox();
     }
 
+    //@@author
     public FloatingTaskListPanel getTaskListPanel() {
         return this.taskListPanel;
     }
