@@ -21,7 +21,7 @@ public class RedoCommand extends Command {
     public static final String MESSAGE_REDO_ADD_SUCCESS = "Redo successful. Redo add %1$s";
     public static final String MESSAGE_REDO_DELETE_SUCCESS = "Redo Successful. Redo delete %1$s";
     public static final String MESSAGE_REDO_CLEAR_SUCCESS = "Redo clear successful";
-    public static final String MESSAGE_REDO_EDIT_SUCCESS = "Redo successful. Redo edit from %1$s to %2$s";
+    public static final String MESSAGE_REDO_EDIT_SUCCESS = "Redo successful. Redo edit from \n%1$s to \n%2$s";
     public static final String MESSAGE_REDO_MARK_SUCCESS = "Redo mark sucessful";
     public static final String MESSAGE_REDO_UNMARK_SUCCESS = "Redo unmark sucessful";
     public static final String MESSAGE_REDO_COMPLETE_SUCCESS = "Redo complete successful";

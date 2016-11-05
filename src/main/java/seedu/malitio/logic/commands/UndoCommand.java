@@ -21,7 +21,7 @@ public class UndoCommand extends Command {
     public static final String MESSAGE_UNDO_ADD_SUCCESS = "Undo successful. Undo add %1$s";
     public static final String MESSAGE_UNDO_DELETE_SUCCESS = "Undo Successful. Undo delete %1$s";
     public static final String MESSAGE_UNDO_CLEAR_SUCCESS = "Undo clear successful";
-    public static final String MESSAGE_UNDO_EDIT_SUCCESS = "Undo successful. Undo edit from %1$s to %2$s";
+    public static final String MESSAGE_UNDO_EDIT_SUCCESS = "Undo successful. Undo edit from \n%1$s to \n%2$s";
     public static final String MESSAGE_UNDO_MARK_SUCCESS = "Undo mark sucessful";
     public static final String MESSAGE_UNDO_UNMARK_SUCCESS = "Undo unmark sucessful";
     public static final String MESSAGE_UNDO_COMPLETE_SUCCESS = "Undo complete successful";
