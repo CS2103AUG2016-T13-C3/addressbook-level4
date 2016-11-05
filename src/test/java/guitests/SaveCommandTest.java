@@ -14,12 +14,11 @@ import seedu.malitio.storage.StorageManager;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
-
+//@@author a0126633j
 /**
  * Assumes storage and file utils are working 
  * 
  */
-//@@author a0126633j
 public class SaveCommandTest extends MalitioGuiTest {
     private static final String DEFAULT_FILE_NAME = "malitio.xml";
     private static final String TEST_FILE_PATH = "src/test/data/tempDataForSaveCommand/test1/";
