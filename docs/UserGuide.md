@@ -25,7 +25,9 @@
    * **`delete`**` e2` : deletes the 2nd event shown in the current schedule list
    * **`exit`** : exits the app
 6. Refer to the [Features](#features) section below for details of each command.<br>
-
+<!--- @@author A0122460W --->
+7. small tip: press esc to clear command box
+<!--- @@author --->
 
 ## Features
 
@@ -155,7 +157,7 @@ Examples:
   Edits the 2nd deadline in the deadline list, replacing its existing tags with the tags: 'wedding' and 'love'.<br>
 <!--- @@author --->
 
-<!--- @@author A0122460W--->
+<!--- @@author A0122460W --->
 #### Completing a floating task or deadline: `complete`
 complete the specified floating task or deadline from Malitio by striking out them.<br>
 Format: `complete f/d+INDEX`
