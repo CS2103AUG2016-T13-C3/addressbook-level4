@@ -21,11 +21,11 @@ Expected : Unknown command
 
 Input : **redo**
 
-Expected :
+Expected : no action to redo!
 
 Input : **undo**
 
-Expected :
+Expected : no action to undo!
 
 **Add Command**
 
@@ -465,7 +465,6 @@ Expected : Redo clear successful
 UI : the deadline appears at D1 and colored red, command box cleared
 
 
-
 Input : **uncomplete d0**
 
 Expected : The deadline index provided is invalid
@@ -478,6 +477,19 @@ Expected : The deadline index provided is invalid
 
 UI : Command box becomes red
 
+Input: **undo**
+
+Expected : Undo uncomplete successful
+
+UI : D1. Collect Passport disappears from deadline list
+
+Input: **undo**
+
+Expected : Undo uncomplete successful
+
+UI : D5. add logo for Malitio gets gray-ed out and striked-out
+
+
 **Clear Command**
 
 
@@ -485,18 +497,13 @@ Input : **clear absd**
 
 Expected : Invalid command format! 
 
-
 clear: Deletes multiple tasks at once.
 
-
 Parameters: none OR  expired
-
 
 Example: clear, clear expired
 
 UI: Command box turns red
-
-
 
 Input: **listall**
 
@@ -508,7 +515,7 @@ Input : **clear expired**
 
 Expected : Malitio has been cleared!
 
-UI: done to-do tasks, deadlines and past events will disappear from panels
+UI: 13 tasks in to-do list, 15 tasks in deadlines list, and 11 tasks in schedule
 
 Input: **listall**
 
@@ -714,7 +721,7 @@ UI: lists all current/relevant tasks
 
 **Find Command**
 
-&lt;- Invalid input --&gt;
+<!- Invalid input -->
 
 Input: **find**
 
@@ -764,9 +771,9 @@ Example: find [f/d/e] adjust bring chill
 
 UI: red command box
 
-&lt;!- valid input --&gt;
+<!- valid input -->
 
-&lt;!- finding in each panel--&gt;
+<!- finding in each panel-->
 
 Input: **find f learn**
 
@@ -782,13 +789,13 @@ UI: Deadline List now shows 4 tasks, all due on 10-Dec
 
 Input: **find e presentation**
 
-Expected: 2 tasks found!
+Expected: 1 tasks found!
 
-UI: Schedule List now shows 2 tasks
+UI: Schedule List now shows 1 task
 
-&lt;!- finding in all panels --&gt;
+<!- finding in all panels -->
 
-Input: **find cs**
+Input: **listall** followed by **find cs**
 
 Expected: 8 tasks found!
 
@@ -796,34 +803,53 @@ UI: Deadline List shows 4 tasks, and Schedule List now shows 4 tasks
 
 &lt;!- multiple keywords --&gt;
 
-Input: **find japan dinner project**
+Input: **list** followed by **find japan dinner project**
 
-Expected: 7 tasks found!
+Expected: 6 tasks found!
 
-UI: To-Do List shows 1 task, Deadline List shows 4 tasks, and Schedule List now shows 2 tasks
+UI: To-Do List shows 1 task, Deadline List shows 4 tasks, and Schedule List now shows 1 task
+
+Input: **find cs**
+
+Expected: 2 tasks found!
+
+UI: Deadline List shows 2 tasks
 
 **Save Command**
 
-&lt;!- invalid file path --&gt;
+<!- invalid file path -->
 
+Input : **save**
+
+Expected : Invalid command format! 
+save: Changes data file location of Malitio.
+Parameters: File Directory
+Example: save C://Users/User PC/Downloads/
+
+UI: Command Box turns red
+ 
 Input : **save data**
 
 Expected : The directory is invalid! Valid file paths must end with &#39;/&#39; or &#39;\&#39;
-
 Example: C://Users/User PC/Downloads/
 
 Input : **save newFolderForSave/**
 
 Expected : Malitio data will be saved in newFolderForSave/malitio.xml from now onwards.
 
-&lt;!- saving in the same folder --&gt;
+UI : Data file is saved at newFolderForSave/malitio.xml
+<!- saving in the same folder -->
 
 Input : **save newFolderForSave\**
 
 Expected : Malitio data will be saved in newFolderForSave/malitio.xml from now onwards.
 
-&lt;!- saving in another folder --&gt;
+UI : Data file is saved at newFolderForSave\malitio.xml
+
+<!- saving in another folder -->
 
 Input : **save data/**
 
 Expected : Malitio data will be saved in data/malitio.xml from now onwards.
+
+UI: Data file is saved at data/malitio.xml
