@@ -114,13 +114,10 @@ public class EditCommand extends Command{
             model.editTask(editedTask, taskToEdit);
             model.getFuture().clear();
         } catch (UniqueFloatingTaskList.DuplicateFloatingTaskException e) {
-            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_DUPLICATE_TASK);
         } catch (UniqueDeadlineList.DuplicateDeadlineException e) {
-            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_DUPLICATE_DEADLINE);
         } catch (DuplicateEventException e) {
-            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_DUPLICATE_EVENT);
         } catch (IllegalValueException e) {
             indicateAttemptToExecuteIncorrectCommand();
