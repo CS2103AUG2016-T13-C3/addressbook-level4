@@ -49,6 +49,7 @@ Role: Developer <br>
  * Implemented natty.
  * Did the initial refactoring from AddressBook to Malitio for test cases.
  * Finalised UI design. 
+ 
 -----
 
 #### [Ng Huan Ran](https://github.com/shusiner)
