@@ -36,8 +36,10 @@
 > * Items in `SQUARE_BRACKETS` are optional.
 > * Items with `...` after them can have multiple instances.
 > * The order of parameters is fixed.
+<!--- @@author a0126633j --->
 > * The following format of DATE/TIME is recognised: 2016-10-24 12pm, Oct 24th noon, day after tomorrow 3pm, next wed.
 > * If one of the field of year, month, day or time is not specified, the default is current year/month/day/time.
+<!--- @@author --->
 
 #### Viewing help : `help`
 Format: `help`
@@ -92,13 +94,13 @@ Examples:
 <!--- @@author a0126633j --->
 #### Finding tasks: `find`
 Finds all input entries specified by the type (deadlines/ floating tasks/ events) whose names or tags is a substring of the given keywords.<br>
-Find MM-DD-YYY also returns deadlines/events on the specified date time.
+Find DD-MMM-YYY also returns deadlines/events on the specified date time.
 If the type is not specified, all entries containing the keyword will be displayed. <br>
 Format: `find [f|d|e] KEYWORD  [MORE KEYWORDS]`
 
 > * The search is case insensitive.
 > * The order of the keywords does not matter. e.g. `Race Car` will match `Car race`
-> * Only the task names are searched.
+> * Task names, tags and date can be searched.
 > * Part of the words will be matched e.g. `Han` will match `Hans`
 > * Task matching at least one keyword will be returned (i.e. `OR` search).
     e.g. `Work` will match `workout daily`
@@ -108,8 +110,8 @@ Examples:
   Returns `workout with mom` in floating task list
 * `find d lunch`<br>
   Returns `lunch with mom` in deadlines list 
-* `find e 10-31-2016`<br>
-  Returns all events that has start or end date as `10-31-2016`
+* `find e 31-Oct`<br>
+  Returns all events that has start or end date as `31-Oct`
 * `find lunch dinner breakfast`<br>
   Returns all tasks having names `lunch`, `dinner`, or `breakfast`
 
@@ -124,9 +126,11 @@ Format: `delete INDEX`
 
 Examples: 
 * `delete e2`<br>
-  Deletes the 2nd task in the currently showing events list.
+  Deletes the 2nd task in the currently showing schedule list, if present.
 * `delete f1`<br>
-  Deletes the 1st task in the currently showing floating task list. 
+  Deletes the 1st task in the currently showing to-do list, if present. 
+* `delete d5`<br>
+  Deletes the 5th task in the currently showing deadline list, if present. 
 <!--- @@author --->
 
 <!--- @@author A0129595N --->
@@ -209,6 +213,7 @@ Examples:
 #### Clearing multiple entries : `clear`
 Clears multiple entries from Malitio.<br>
 Format: `clear [expired]` 
+* Expired tasks are defined as deadlines or floating tasks that are completed, or events that has passed.
 
 Examples: 
 * `clear`<br>
@@ -263,7 +268,7 @@ Command | Format
 Add	| `add TASK_NAME [by DATE/TIME] [start DATE/TIME end DATE/TIME] [t/TAG]...`
 Clear 	| `clear [expired]`
 Delete  | `delete [f|d|e]INDEX`
-Find 	| `find KEYWORD [MORE_KEYWORDS] [t/TYPE]`
+Find 	| `find [f|d|e] KEYWORD [MORE_KEYWORDS]`
 List 	| `list`
 Listall 	| `listall`
 Edit 	| `edit [f|d|e]INDEX [NAME] [by DATE/TIME] [start DATE/TIME] [end DATE/TIME] [t/TAG]...`
