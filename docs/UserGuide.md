@@ -115,7 +115,7 @@ Examples:
   Returns all events that has start or end date as `31-Oct`
 * `find lunch dinner breakfast`<br>
   Returns all tasks in the current list having names `lunch`, `dinner`, or `breakfast`
-* `find dance` followed by `find studio`
+* `find dance` followed by `find studio` <br>
    Returns all tasks in current lists having names `dance` AND `studio`
 
 
