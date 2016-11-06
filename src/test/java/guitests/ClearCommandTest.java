@@ -37,7 +37,7 @@ public class ClearCommandTest extends MalitioGuiTest {
         commandBox.runCommand("listall");
         assertTotalListSize(17);
         
-        commandBox.runCommand("clear expired"); //clear 4 tasks
+        commandBox.runCommand("clear expired"); //clear 4 expired tasks
         commandBox.runCommand("listall");
         assertTotalListSize(13);
     

@@ -58,7 +58,8 @@ public class SaveCommand extends Command {
         }
         EventsCenter.getInstance().post(new DataStorageFileChangedEvent(dataFilePath));
         ConfigUtil.changeMalitioSaveDirectory(dataFilePath);
-        model.dataFilePathChanged();
+        model.handleDataFilePathChanged();
+
 
         return new CommandResult(String.format(MESSAGE_SAVE_SUCCESSFUL, dataFilePath));
     }

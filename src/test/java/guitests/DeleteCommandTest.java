@@ -54,7 +54,7 @@ public class DeleteCommandTest extends MalitioGuiTest {
 
     /**
      * Runs the delete command to delete the task at specified index and confirms the result is correct.
-     * (overloading functions for different tasks)
+     * (overloading functions for different types of tasks)
      * @param targetIndexOneIndexed e.g. to delete the first task in the list, 1 should be given as the target index.
      * @param task list: A copy of the current list of tasks (before deletion).
      */

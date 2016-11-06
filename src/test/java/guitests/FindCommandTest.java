@@ -17,17 +17,15 @@ public class FindCommandTest extends MalitioGuiTest {
 
     //In the tests below, we assume event,floating task and deadline lists are identical, hence to save resources only work on them equally
        @Test
-    public void find_nonEmptyList() throws IllegalArgumentException, IllegalValueException {
+       public void find_nonEmptyList() throws IllegalArgumentException, IllegalValueException {
 
         assertFindResult("find with", td.event1, td.event2); //multiple results
         assertResultMessage("2 tasks found!");
         
         assertFindResult("find peN HOMEWORK", td.floatingTask2, td.deadline3, td.deadline5);
-      //  assertFindResult("find peN HOMEWORK");
         assertResultMessage("3 tasks found!");
         
         assertFindResult("find 25-dec", td.deadline4, td.event5); //find dates
-       // assertFindResult("find 12-25");
         assertResultMessage("2 tasks found!");
         
         assertFindResult("find wedding"); //no result
@@ -67,7 +65,7 @@ public class FindCommandTest extends MalitioGuiTest {
     }
     
     /**
-     * Overload functions to assert result in each floating task, deadline and event list is correct
+     * Asserts results in floating task, deadline and event list is correct
      * @throws IllegalValueException 
      * @throws IllegalArgumentException 
      */
@@ -77,9 +75,9 @@ public class FindCommandTest extends MalitioGuiTest {
         
         switch (expectedHits.getClass().getSimpleName()) {
         case "TestFloatingTask":
-        assertFloatingTaskListSize(expectedHits.length);
-        assertTrue(floatingTaskListPanel.isListMatching((TestFloatingTask[]) expectedHits));
-        break;
+            assertFloatingTaskListSize(expectedHits.length);
+            assertTrue(floatingTaskListPanel.isListMatching((TestFloatingTask[]) expectedHits));
+            break;
         case "TestDeadline":
             assertDeadlineListSize(expectedHits.length);
             assertTrue(deadlineListPanel.isListMatching((TestDeadline[]) expectedHits));

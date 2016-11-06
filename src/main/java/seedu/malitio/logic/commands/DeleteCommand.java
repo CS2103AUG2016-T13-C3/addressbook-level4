@@ -10,13 +10,13 @@ import seedu.malitio.model.task.UniqueDeadlineList.DeadlineNotFoundException;
 import seedu.malitio.model.task.UniqueEventList.EventNotFoundException;
 import seedu.malitio.model.task.UniqueFloatingTaskList.FloatingTaskNotFoundException;
 
+//@@author a0126633j
 /**
  * Deletes a task identified using it's last displayed index from Malitio.
  * 
  */
 public class DeleteCommand extends Command {
 
-    //@@author a0126633j
     public static final String COMMAND_WORD = "delete";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD

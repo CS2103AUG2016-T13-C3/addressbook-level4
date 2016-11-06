@@ -20,8 +20,8 @@ import static org.junit.Assert.assertFalse;
  * Assumes storage and file utils are working 
  * 
  */
-
 public class SaveCommandTest extends MalitioGuiTest {
+    private static final String DEFAULT_FILE_PATH_USING_BACKSLASH = "src\\test\\data\\tempDataForSaveCommand\\";
     private static final String DEFAULT_FILE_NAME = "malitio.xml";
     private static final String TEST_FILE_PATH = "src/test/data/tempDataForSaveCommand/test1/";
     private static final String DEFAULT_FILE_PATH = "src/test/data/tempDataForSaveCommand/";
@@ -50,26 +50,27 @@ public class SaveCommandTest extends MalitioGuiTest {
     assertFileDeletionSuccessful(DEFAULT_FILE_PATH);
     
     //save default file location again but with back slash
-    commandBox.runCommand("save " + "src\\test\\data\\tempDataForSaveCommand\\");
-    assertSaveSuccessful("src\\test\\data\\tempDataForSaveCommand\\");
+    commandBox.runCommand("save " + DEFAULT_FILE_PATH_USING_BACKSLASH);
+    assertSaveSuccessful(DEFAULT_FILE_PATH_USING_BACKSLASH);
     assertFileDeletionSuccessful(TEST_FILE_PATH);
     
     //invalid file path
     commandBox.runCommand("save abc");
     assertResultMessage(SaveCommand.MESSAGE_INVALID_DIRECTORY + SaveCommand.MESSAGE_DIRECTORY_EXAMPLE);
     
-    //orginal save file location should be preserved after the tests
+    //Preserves orginal save file location after the tests
     ConfigUtil.changeMalitioSaveDirectory(originalFilePath);
     }
 
     /**
-     * Asserts new file is present and consistent with Malitio data
+     * Asserts data file is present in new file location and consistent with Malitio data
      * @throws DataConversionException 
      * @throws IOException 
      */
     public void assertSaveSuccessful(String newFileLocation) throws DataConversionException, IOException {
         File f = new File(newFileLocation + DEFAULT_FILE_NAME);
         if(f.exists()) {
+            //checks consistency of data in the file
             assertEquals(original, new Malitio(storageManager.readMalitio(newFileLocation + DEFAULT_FILE_NAME).get()));
             assertResultMessage(String.format(SaveCommand.MESSAGE_SAVE_SUCCESSFUL, newFileLocation + DEFAULT_FILE_NAME));
         } else {

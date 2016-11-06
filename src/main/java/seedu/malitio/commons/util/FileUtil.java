@@ -96,6 +96,11 @@ public class FileUtil {
     }
     
     //@@author a0126633j
+    /**
+     * Deletes a file if the file exists in the given filePath
+     * @param filePath
+     * @throws IOException
+     */
     public static void deleteFile(String filePath) throws IOException {
         Path path = Paths.get(filePath);
         Files.deleteIfExists(path);

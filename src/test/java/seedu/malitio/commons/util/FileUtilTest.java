@@ -65,4 +65,5 @@ public class FileUtilTest {
         assertTrue(FileUtil.twoFilePathsAreEqual("./data/test/", "data/../data/test/"));
         assertFalse(FileUtil.twoFilePathsAreEqual("./data/tests/", "data/"));
     }
+    //@@author
 }
