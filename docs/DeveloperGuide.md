@@ -326,6 +326,21 @@ Use case ends.
 
 > 1a1. Malitio shows an error message <br>
   Use case restarts at step 1
+  
+#### Use case: Changing the data file location of Malitio
+
+**MSS**
+
+1. User requests save data file at a user-specified file path
+2. Malitio remembers the change and saves data file from then on. <br>
+Use case ends.
+
+**Extensions**
+
+1a. The given file path is invalid
+
+> 1a1. Malitio shows an error message <br>
+  Use case restarts at step 1
 
 ## Appendix C : Non Functional Requirements
 
