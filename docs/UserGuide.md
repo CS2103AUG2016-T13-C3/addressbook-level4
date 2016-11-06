@@ -251,7 +251,7 @@ There is no need to save manually. <br>
 Users can specify which directory to save their data file. Only valid directory will be created if it does not exist already. <br>
 The old data file will automatically be deleted.
 Format: `save DIRECTORY`
-* DIRECTORY can be in absolute or relative format
+* DIRECTORY can be in absolute or relative format in Windows, but only relative format in Mac
 
 Example: 
 * `save C://Users`<br>
@@ -263,7 +263,12 @@ Example:
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: Install the app in the other computer and overwrite the empty data file it creates with 
        the file that contains the data of your previous malitio folder.
-       
+
+<!--- @@author a0126633j ---> 
+**Q**: Does Malitio work on any OS?<br>
+**A**: Currently Malitio only supports Mac OS and Windows.
+<!--- @@author --->
+
 ## Command Summary
 
 Command | Format  
