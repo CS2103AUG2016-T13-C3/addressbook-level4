@@ -163,7 +163,7 @@ The `Model`,
 
 The `Storage` component,
 * can save `UserPref` objects in json format and read it back.
-* can save the malitio data in xml format and read it back.
+* can save the Malitio data in xml format and read it back.
 
 ### Common classes
 
@@ -284,14 +284,15 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | delete an event | remove an event that has passed or has been cancelled
 `* * *` | user | delete a deadline | remove a deadline that has passed or been removed
 `* * *` | user | complete floating tasks or deadlines | complete floating tasks and deadlines to remind users that it is completed
-`* * *` | user | find a(n) event/deadline/floating task by name | locate details of the event/deadline/task without having to go through the entire list
+`* * *` | user | find a(n) event/deadline/floating task by name or tags | locate details of the event/deadline/task without having to go through the entire list
 `* * *` | user | edit a(n) event/deadline/floating task | update it or correct any errors
 `* * *` | user | set a(n) event/deadlines/floating task as a priority | know which one should be completed first
 `* * *` | user | view all tasks | plan ahead depending on availablity
 `* * *` | user | view all tasks on specified day(s) | plan ahead 
 `* * *` | user | undo my last action | rectify any mistakes I made
 `* *` | user | redo my last undo action | rectify the undo in case i changed my mind
-
+`* *` | user | save my data file in custom location | directly upload my files into cloud
+`* *` | user | clear my task lists from time to time | keep my task lists neat
 
 ## Appendix B : Use Cases
 
@@ -328,7 +329,7 @@ Use case ends.
 
 ## Appendix C : Non Functional Requirements
 
-1. Should work on any [mainstream OS](#mainstream-os) as long as it has Java `1.8.0_60` or higher installed.
+1. Should work on Windows and Mac as long as it has Java `1.8.0_60` or higher installed.
 2. Should be able to hold up to 1000 floating tasks, events and deadlines combined.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
@@ -336,10 +337,6 @@ Use case ends.
 {More to be added}
 
 ## Appendix D : Glossary
-
-##### Mainstream OS
-
-> Windows, Linux, Unix, OS-X
 
 ##### Floating task
 
