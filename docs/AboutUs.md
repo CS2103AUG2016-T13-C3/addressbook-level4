@@ -43,11 +43,12 @@ Role: Developer <br>
  * [Save Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#specifying-location-of-local-data-file-save) <br>
  * [Find Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#finding-all-deadlinesfloating-tasksevents-containing-any-keyword-in-their-names-and-tags-find) <br>
  * [Delete Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#deleting-a-task--delete) <br>
+ * [Clear Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#clearing-multiple-entries--clear) <br>
 * Code written: [[functional code]](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/collated/main/a0126633j.md) [[test code]](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/collated/test/a0126633j.md) [[docs]](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/collated/docs/a0126633j.md) <br>
 * Other major contributions: <br>
  * Implemented natty.
  * Did the initial refactoring from AddressBook to Malitio for test cases.
- 
+ * Finalised UI design. 
 -----
 
 #### [Ng Huan Ran](https://github.com/shusiner)
