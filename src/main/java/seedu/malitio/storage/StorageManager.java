@@ -12,9 +12,7 @@ import seedu.malitio.commons.util.FileUtil;
 import seedu.malitio.model.ReadOnlyMalitio;
 import seedu.malitio.model.UserPrefs;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -91,17 +89,16 @@ public class StorageManager extends ComponentManager implements Storage {
         }
     }
     
+    //@@author a0126633j
     /**
      * Stores the current data file in the new directory and deletes the old data file.
      * @param event
      * @throws DataConversionException
      * @throws IOException 
      */
-    //@@author a0126633j
     @Subscribe
     public void handleDataStorageFileChangedEvent(DataStorageFileChangedEvent event) throws DataConversionException, IOException {
         String oldDataFilePath = malitioStorage.getMalitioFilePath();
-        Optional<ReadOnlyMalitio> dataToBeTransferred = malitioStorage.readMalitio();
         malitioStorage = new XmlMalitioStorage(event.dataFilePath);
         
         if(FileUtil.twoFilePathsAreEqual(oldDataFilePath, this.malitioStorage.getMalitioFilePath())) {
@@ -117,4 +114,5 @@ public class StorageManager extends ComponentManager implements Storage {
             logger.info(LogsCenter.getEventHandlingLogMessage(event, "Failed to delete old data file."));
         }
     }
+    //@@author
 }

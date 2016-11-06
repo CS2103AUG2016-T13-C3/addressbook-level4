@@ -193,7 +193,7 @@ public class ModelManager extends ComponentManager implements Model {
 
     //@@author a0126633j
     @Override
-    public void dataFilePathChanged() {
+    public void handleDataFilePathChanged() {
         logger.info("Data storage file path changed, updating..");
         indicateMalitioChanged();
     }
@@ -213,6 +213,9 @@ public class ModelManager extends ComponentManager implements Model {
         indicateMalitioChanged();        
     }   
     
+    /**
+     * Deletes all completed floating tasks
+     */
     private void clearExpiredFloatingTasks(List<ReadOnlyFloatingTask> list) {
         List<ReadOnlyFloatingTask> toBeRemoved = new ArrayList<ReadOnlyFloatingTask>();
     
@@ -229,6 +232,10 @@ public class ModelManager extends ComponentManager implements Model {
             }
         } 
     }
+    
+    /**
+     * Delete all completed deadlines
+     */
     private void clearExpiredDeadlines(List<ReadOnlyDeadline> list) {
         List<ReadOnlyDeadline> toBeRemoved = new ArrayList<ReadOnlyDeadline>();
         
@@ -246,6 +253,9 @@ public class ModelManager extends ComponentManager implements Model {
         }  
     }
 
+    /**
+     * Deletes all events that has passed
+     */
     private void clearExpiredEvents(List<ReadOnlyEvent> list) {
         Date current = new Date();
         List<ReadOnlyEvent> toBeRemoved = new ArrayList<ReadOnlyEvent>();

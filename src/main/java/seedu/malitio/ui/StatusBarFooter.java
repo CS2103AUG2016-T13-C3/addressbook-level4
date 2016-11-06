@@ -103,4 +103,5 @@ public class StatusBarFooter extends UiPart {
     public void handleDataStorageFileChangedEvent(DataStorageFileChangedEvent event) {
         setSaveLocation(event.dataFilePath);
     }
+    //@@author
 }

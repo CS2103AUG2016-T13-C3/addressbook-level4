@@ -58,15 +58,16 @@ public class ConfigUtil {
 
         FileUtil.serializeObjectToJsonFile(new File(configFilePath), config);
     }
-    
+       
+    //@@author a0126633j
     /**
-     * Changing the location of saving local data in config.json file
+     * Changing the location of saving local data in config.json file so that Malitio uses this location during start-up
      * @param dataFilePath
      */
-    //@@author a0126633j
     public static void changeMalitioSaveDirectory(String dataFilePath) {
         Config existingConfig;
         
+        //get current config
         try {
             Optional<Config> config = readConfig(Config.DEFAULT_CONFIG_FILE);
             existingConfig = config.orElse(new Config());
@@ -75,6 +76,7 @@ public class ConfigUtil {
             existingConfig = new Config();
         }
         
+        //save new config with new dataFilePath
        existingConfig.setMalitioFilePath(dataFilePath);
        try {
            saveConfig(existingConfig, Config.DEFAULT_CONFIG_FILE);

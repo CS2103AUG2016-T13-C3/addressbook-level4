@@ -90,7 +90,7 @@ public interface Model {
     DeadlineNotFoundException, DeadlineUnmarkedException, EventNotFoundException, EventUnmarkedException;
 	
     /** Indicate the directory of data file has changed. Save data into new directory*/
-    void dataFilePathChanged();
+    void handleDataFilePathChanged();
     
     /**
      * Deletes all completed deadlines and floating tasks and past events from the model.

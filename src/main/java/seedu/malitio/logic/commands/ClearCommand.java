@@ -32,11 +32,11 @@ public class ClearCommand extends Command {
         
         int index = Arrays.asList(VALID_ARGUMENTS).indexOf(arg);   
         switch (index) {
-        case 0:
+        case 0: //no arguments
         model.resetData(Malitio.getEmptymalitio());
         break;
         
-        case 1:
+        case 1: //argument is "expired"
         model.clearExpiredTasks();
         break;
         

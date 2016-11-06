@@ -56,9 +56,10 @@ public class SaveCommand extends Command {
             indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_INVALID_DIRECTORY + MESSAGE_DIRECTORY_EXAMPLE);
         }
+        model.handleDataFilePathChanged();
         EventsCenter.getInstance().post(new DataStorageFileChangedEvent(dataFilePath));
         ConfigUtil.changeMalitioSaveDirectory(dataFilePath);
-        model.dataFilePathChanged();
+        
 
         return new CommandResult(String.format(MESSAGE_SAVE_SUCCESSFUL, dataFilePath));
     }
