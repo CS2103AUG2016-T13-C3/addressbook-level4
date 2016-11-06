@@ -7,6 +7,7 @@
 3. Restart malitio and it will be loaded with the sample data
 
 Input :
+
 Expected : Invalid command format!
 
 help: Shows program usage instructions.
@@ -60,7 +61,7 @@ Input : **add eat supper with friends start todayyy end tomorrow**
 
 Expected : Unrecognised date and time!
 
-UI : Command Box turns red.
+UI : Command Box becomes red.
 
 Input : **add outing with secondary school friends end today**
 
@@ -68,13 +69,13 @@ Expected : Expecting start and end times
 
 Example: start thursday 0800 end thursday 0900
 
-UI : Command Box turns red.
+UI : Command Box becomes red.
 
 Input : **add lecture quiz start next year end next month**
 
 Expected : Event must start before it ends!
 
-UI : Command Box turns red.
+UI : Command Box becomes red.
 
 Input : **add friend 21st birthday celebration start 15 dec 4pm end 15 dec 10pm t/buypresent**
 
@@ -132,13 +133,13 @@ Parameters: INDEX
 
 Example: delete D1
 
-UI : Command box turns red
+UI : Command Box becomes red
 
 Input : **delete f0**
 
 Expected : The task index provided is invalid
 
-UI : Command box turns red
+UI : Command Box becomes red
 
 &lt;!- Valid arguments --&gt;
 
@@ -298,7 +299,7 @@ Input : **edit e0 a**
 
 Expected : The task index provided is invalid
 
-UI : Red command box
+UI : Command Box becomes red
 
 **Complete Command**
 
@@ -503,7 +504,7 @@ Parameters: none OR  expired
 
 Example: clear, clear expired
 
-UI: Command box turns red
+UI: Command Box becomes red
 
 Input: **listall**
 
@@ -593,13 +594,13 @@ Input: **mark d0**
 
 Expected: The task index provided is invalid
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **mark f300**
 
 Expected: The task index provided is invalid
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **mark do**
 
@@ -611,7 +612,7 @@ Parameters: INDEX
 
 Example: mark f1
 
-UI: red command box
+UI: Command Box becomes red
 
 **Unmark Command**
 
@@ -655,13 +656,13 @@ Input: **unmark e0**
 
 Expected: The task index provided is invalid
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **unmark e300**
 
 Expected: The task index provided is invalid
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **unmark**
 
@@ -673,7 +674,7 @@ Parameters: INDEX
 
 Example: unmark f1
 
-UI: red command box
+UI: Command Box becomes red
 
 **List Command**
 
@@ -705,7 +706,7 @@ Parameters: [events|deadlines|tasks] [DATETIME]
 
 Example: list deadlines sunday midnight
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **list events dec 5 8am**
 
@@ -721,7 +722,7 @@ UI: lists all current/relevant tasks
 
 **Find Command**
 
-<!- Invalid input -->
+<!-- Invalid input -->
 
 Input: **find**
 
@@ -733,7 +734,7 @@ Parameters: KEYWORD [MORE\_KEYWORDS]...
 
 Example: find [f/d/e] adjust bring chill
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **find e**
 
@@ -745,7 +746,7 @@ Parameters: KEYWORD [MORE\_KEYWORDS]...
 
 Example: find [f/d/e] adjust bring chill
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **find d**
 
@@ -757,7 +758,7 @@ Parameters: KEYWORD [MORE\_KEYWORDS]...
 
 Example: find [f/d/e] adjust bring chill
 
-UI: red command box
+UI: Command Box becomes red
 
 Input: **find f**
 
@@ -769,11 +770,11 @@ Parameters: KEYWORD [MORE\_KEYWORDS]...
 
 Example: find [f/d/e] adjust bring chill
 
-UI: red command box
+UI: Command Box becomes red
 
-<!- valid input -->
+<!-- valid input -->
 
-<!- finding in each panel-->
+<!-- finding in each panel-->
 
 Input: **find f learn**
 
@@ -793,7 +794,7 @@ Expected: 1 tasks found!
 
 UI: Schedule List now shows 1 task
 
-<!- finding in all panels -->
+<!-- finding in all panels -->
 
 Input: **listall** followed by **find cs**
 
@@ -801,7 +802,7 @@ Expected: 8 tasks found!
 
 UI: Deadline List shows 4 tasks, and Schedule List now shows 4 tasks
 
-&lt;!- multiple keywords --&gt;
+<!-- multiple keywords and multiple finds -->
 
 Input: **list** followed by **find japan dinner project**
 
@@ -817,20 +818,24 @@ UI: Deadline List shows 2 tasks
 
 **Save Command**
 
-<!- invalid file path -->
+<!-- invalid file path -->
 
 Input : **save**
 
 Expected : Invalid command format! 
+
 save: Changes data file location of Malitio.
+
 Parameters: File Directory
+
 Example: save C://Users/User PC/Downloads/
 
-UI: Command Box turns red
+UI: Command Box becomes red
  
 Input : **save data**
 
 Expected : The directory is invalid! Valid file paths must end with &#39;/&#39; or &#39;\&#39;
+
 Example: C://Users/User PC/Downloads/
 
 Input : **save newFolderForSave/**
@@ -838,7 +843,7 @@ Input : **save newFolderForSave/**
 Expected : Malitio data will be saved in newFolderForSave/malitio.xml from now onwards.
 
 UI : Data file is saved at newFolderForSave/malitio.xml
-<!- saving in the same folder -->
+<!-- saving in the same folder -->
 
 Input : **save newFolderForSave\**
 
@@ -846,7 +851,7 @@ Expected : Malitio data will be saved in newFolderForSave/malitio.xml from now o
 
 UI : Data file is saved at newFolderForSave\malitio.xml
 
-<!- saving in another folder -->
+<!-- saving in another folder -->
 
 Input : **save data/**
 
