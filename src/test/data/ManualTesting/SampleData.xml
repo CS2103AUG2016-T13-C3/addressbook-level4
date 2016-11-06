@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<malitio>
+    <floatingTasks>
+        <name>design dream house</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <tagged>modern</tagged>
+    </floatingTasks>
+    <floatingTasks>
+        <name>learn new recipes</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <tagged>baking</tagged>
+        <tagged>japanese</tagged>
+    </floatingTasks>
+    <floatingTasks>
+        <name>go skydiving</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>travel to Germany</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <tagged>ww2</tagged>
+        <tagged>history</tagged>
+    </floatingTasks>
+    <floatingTasks>
+        <name>learn Japanese</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>watch How I Met Your Mother</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>plan hiking trip</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>adopt a healthy lifestyle</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>eat less fast food</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>exercise more</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>adopt a cat</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>volunteer in an animal shelter</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <floatingTasks>
+        <name>sleep earlier</name>
+        <completed>false</completed>
+        <marked>false</marked>
+    </floatingTasks>
+    <deadlines>
+        <name>collect passport</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>11-03-2016 16:00</due>
+    </deadlines>
+    <deadlines>
+        <name>upload ST4231 tutorial</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>11-03-2016 23:59</due>
+        <tagged>needUpload</tagged>
+    </deadlines>
+    <deadlines>
+        <name>CS2107 project and video</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>11-04-2016 23:59</due>
+    </deadlines>
+    <deadlines>
+        <name>ST3240 project</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>11-04-2016 23:59</due>
+    </deadlines>
+    <deadlines>
+        <name>study for MA3269 quiz</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-06-2016 22:17</due>
+    </deadlines>
+    <deadlines>
+        <name>order taobao stuff</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-06-2016 22:20</due>
+    </deadlines>
+    <deadlines>
+        <name>add logo for Malitio</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-07-2016 23:59</due>
+    </deadlines>
+    <deadlines>
+        <name>cs2103 project code deadline</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-07-2016 23:59</due>
+    </deadlines>
+    <deadlines>
+        <name>buy cat museum calendar</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-08-2016 17:00</due>
+    </deadlines>
+    <deadlines>
+        <name>homework</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-09-2016 20:42</due>
+    </deadlines>
+    <deadlines>
+        <name>watch webcast</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-10-2016 00:04</due>
+    </deadlines>
+    <deadlines>
+        <name>fix aircon</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-10-2016 00:07</due>
+    </deadlines>
+    <deadlines>
+        <name>study for cs2103 finals</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-15-2016 22:15</due>
+    </deadlines>
+    <deadlines>
+        <name>buy present for brother birthday</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-17-2016 00:05</due>
+    </deadlines>
+    <deadlines>
+        <name>prepare present for boyfriend</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-25-2016 00:00</due>
+    </deadlines>
+    <deadlines>
+        <name>buy christmas presents for family</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-25-2016 22:13</due>
+    </deadlines>
+    <deadlines>
+        <name>plan family trip to Japan</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>01-01-2017 22:14</due>
+    </deadlines>
+    <deadlines>
+        <name>prepare bff birthday gift</name>
+        <completed>false</completed>
+        <marked>false</marked>
+        <due>12-10-2017 00:03</due>
+    </deadlines>
+    <events>
+        <name>st3240 meeting</name>
+        <start>11-02-2016 11:00</start>
+        <end>11-02-2016 16:00</end>
+    </events>
+    <events>
+        <name>cs2107 project finalization</name>
+        <start>11-02-2016 16:00</start>
+        <end>11-02-2016 20:00</end>
+    </events>
+    <events>
+        <name>cs2103 tutorial presentation</name>
+        <start>11-03-2016 14:00</start>
+        <end>11-03-2016 15:00</end>
+    </events>
+    <events>
+        <name>cs2107 lecture</name>
+        <start>11-03-2016 16:00</start>
+        <end>11-03-2016 18:00</end>
+        <tagged>hahaha</tagged>
+        <tagged>lol</tagged>
+    </events>
+    <events>
+        <name>visit to cat museum with mama</name>
+        <start>11-03-2016 17:00</start>
+        <end>11-03-2016 18:00</end>
+    </events>
+    <events>
+        <name>st4231 lecture</name>
+        <start>11-04-2016 10:00</start>
+        <end>11-04-2016 11:30</end>
+    </events>
+    <events>
+        <name>st3240 tutorial</name>
+        <start>11-04-2016 13:00</start>
+        <end>11-04-2016 13:45</end>
+        <tagged>noNeedAttend</tagged>
+    </events>
+    <events>
+        <name>cs2103 lecture</name>
+        <start>11-04-2016 14:00</start>
+        <end>11-04-2016 15:30</end>
+        <tagged>hopefully</tagged>
+    </events>
+    <events>
+        <name>get starbucks 1 for 1</name>
+        <start>11-04-2016 15:00</start>
+        <end>11-04-2016 20:00</end>
+    </events>
+    <events>
+        <name>dinner with family</name>
+        <start>12-04-2016 19:00</start>
+        <end>12-04-2016 21:00</end>
+    </events>
+    <events>
+        <name>wedding dinner</name>
+        <start>12-05-2016 18:00</start>
+        <end>12-05-2016 21:00</end>
+    </events>
+    <events>
+        <name>st3233 lecture</name>
+        <start>12-07-2016 08:00</start>
+        <end>12-07-2016 09:30</end>
+        <tagged>timeseries</tagged>
+    </events>
+    <events>
+        <name>ma3269 lecture quiz</name>
+        <start>12-07-2016 10:00</start>
+        <end>12-07-2016 11:30</end>
+    </events>
+    <events>
+        <name>lunch with friends</name>
+        <start>12-08-2016 12:00</start>
+        <end>12-08-2016 14:00</end>
+    </events>
+    <events>
+        <name>st3240 presentation</name>
+        <start>12-08-2016 13:20</start>
+        <end>12-08-2016 13:40</end>
+    </events>
+    <events>
+        <name>driving lesson</name>
+        <start>12-10-2016 14:00</start>
+        <end>12-10-2016 16:00</end>
+    </events>
+    <events>
+        <name>swimming lesson</name>
+        <start>12-10-2016 20:00</start>
+        <end>12-10-2016 21:00</end>
+    </events>
+    <events>
+        <name>christmas party</name>
+        <start>12-25-2016 14:00</start>
+        <end>12-25-2016 22:00</end>
+    </events>
+    <events>
+        <name>new year party</name>
+        <start>12-31-2016 23:00</start>
+        <end>01-01-2017 22:00</end>
+    </events>
+    <events>
+        <name>valentine day date</name>
+        <start>02-14-2017 14:00</start>
+        <end>02-14-2017 20:00</end>
+    </events>
+    <tags>
+        <tagName>modern</tagName>
+    </tags>
+    <tags>
+        <tagName>baking</tagName>
+    </tags>
+    <tags>
+        <tagName>japanese</tagName>
+    </tags>
+    <tags>
+        <tagName>history</tagName>
+    </tags>
+    <tags>
+        <tagName>ww2</tagName>
+    </tags>
+    <tags>
+        <tagName>homework</tagName>
+    </tags>
+    <tags>
+        <tagName>noNeedAttend</tagName>
+    </tags>
+    <tags>
+        <tagName>hopefully</tagName>
+    </tags>
+    <tags>
+        <tagName>bringJacket</tagName>
+    </tags>
+    <tags>
+        <tagName>veryCold</tagName>
+    </tags>
+    <tags>
+        <tagName>alwaysOverrun</tagName>
+    </tags>
+    <tags>
+        <tagName>le</tagName>
+    </tags>
+    <tags>
+        <tagName>nulll</tagName>
+    </tags>
+    <tags>
+        <tagName>lala</tagName>
+    </tags>
+    <tags>
+        <tagName>asd</tagName>
+    </tags>
+    <tags>
+        <tagName>asdasd</tagName>
+    </tags>
+    <tags>
+        <tagName>asda</tagName>
+    </tags>
+    <tags>
+        <tagName>asdsa</tagName>
+    </tags>
+    <tags>
+        <tagName>hahaha</tagName>
+    </tags>
+    <tags>
+        <tagName>lol</tagName>
+    </tags>
+    <tags>
+        <tagName>haha</tagName>
+    </tags>
+    <tags>
+        <tagName>nul</tagName>
+    </tags>
+    <tags>
+        <tagName>la</tagName>
+    </tags>
+    <tags>
+        <tagName>needUpload</tagName>
+    </tags>
+    <tags>
+        <tagName>timeseries</tagName>
+    </tags>
+</malitio>
