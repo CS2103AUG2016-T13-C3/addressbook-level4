@@ -65,6 +65,12 @@ Role: Developer <br>
 
 -----
 
+#### Zhang Zhong Wei
+<img src="images/mentor.JPG" width = "150"><br>
+* Project mentor
+
+-----
+
 # Contributors
 
 We welcome contributions. See [Contact Us](ContactUs.md) page for more info.
