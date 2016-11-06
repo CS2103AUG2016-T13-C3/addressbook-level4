@@ -56,7 +56,9 @@ Role: Developer <br>
 * Component in charge of: [UI](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/DeveloperGuide.md#ui-component) <br>
 * Aspects/tools in charge of: Code Quality <br>
 * Features implemented: <br>
-   * [Complete Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#edit-a-task--complete) <br>
+   * [Complete Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#completing-a-floating-task-or-deadline-complete) <br>
+   * [Uncomplete Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#uncompleting-a-floating-task-or-deadline-uncomplete) <br>
+   * [Listall Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#list-all-task-from-beginning-of-time-listall) <br>
 * Code written: [[functional code]](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/collated/main/A0122460W.md) [[test code]](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/collated/test/A0122460W.md) [[docs]](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/collated/docs/A0122460W.md) <br>
 * Other major contributions: <br>
   * Set the base structure to Malitio 
