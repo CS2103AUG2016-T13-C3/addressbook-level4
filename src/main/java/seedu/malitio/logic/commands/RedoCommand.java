@@ -33,6 +33,7 @@ public class RedoCommand extends Command {
 
         Stack<InputHistory> future = model.getFuture();
         if (future.isEmpty()) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult("No action to redo!");
         }
         InputHistory previous = future.pop();

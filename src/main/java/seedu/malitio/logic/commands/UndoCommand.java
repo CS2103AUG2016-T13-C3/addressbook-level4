@@ -33,6 +33,7 @@ public class UndoCommand extends Command {
 
         Stack<InputHistory> history = model.getHistory();
         if (history.isEmpty()) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult("No action to undo!");
         }
         InputHistory previous = history.pop();

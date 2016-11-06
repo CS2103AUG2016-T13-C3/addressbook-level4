@@ -100,7 +100,8 @@ public class EditCommand extends Command{
             return new CommandResult(Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);
         }
         
-        if (!detectWrongParameters()) {
+        if (!checkCorrectParameters()) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_CHANGING_TASK_TYPE_NOT_SUPPORTED);
         }
 
@@ -113,12 +114,16 @@ public class EditCommand extends Command{
             model.editTask(editedTask, taskToEdit);
             model.getFuture().clear();
         } catch (UniqueFloatingTaskList.DuplicateFloatingTaskException e) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_DUPLICATE_TASK);
         } catch (UniqueDeadlineList.DuplicateDeadlineException e) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_DUPLICATE_DEADLINE);
         } catch (DuplicateEventException e) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_DUPLICATE_EVENT);
         } catch (IllegalValueException e) {
+            indicateAttemptToExecuteIncorrectCommand();
             return new CommandResult(MESSAGE_INVALID_EVENT);
         } catch (FloatingTaskNotFoundException | DeadlineNotFoundException | EventNotFoundException e) {
             assert false : "not possible";
@@ -126,7 +131,7 @@ public class EditCommand extends Command{
         return new CommandResult(String.format(MESSAGE_EDIT_TASK_SUCCESS, taskToEdit, editedTask));
     }
 
-    private boolean detectWrongParameters() {
+    private boolean checkCorrectParameters() {
         if ((taskType == 'f' && due == null && start == null && end == null)) {
             return true;
         } else if ((taskType == 'd' && start == null && end == null)) {

@@ -97,10 +97,13 @@ public class AddCommand extends Command {
                 model.getFuture().clear();
                 return new CommandResult(String.format(MESSAGE_SUCCESS, toAddTask));
             } catch (DuplicateFloatingTaskException e) {
+                indicateAttemptToExecuteIncorrectCommand();
                 return new CommandResult(MESSAGE_DUPLICATE_TASK);
             } catch (DuplicateDeadlineException e) {
+                indicateAttemptToExecuteIncorrectCommand();
                 return new CommandResult(MESSAGE_DUPLICATE_DEADLINE);
             } catch (DuplicateEventException e) {
+                indicateAttemptToExecuteIncorrectCommand();
                 return new CommandResult(MESSAGE_DUPLICATE_EVENT);
             }
         }
