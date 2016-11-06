@@ -10,6 +10,7 @@ We are a team based in the [School of Computing, National University of Singapor
 * Component in charge of: [Model](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/DeveloperGuide.md#model-component) <br>
 * Aspects/tools in charge of: Documentation <br>
 * Features implemented: <br>
+   * [Add Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#adding-a-task-add) <br>
    * [Edit Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#edit-a-task--edit) <br>
    * [Undo Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#undo-the-most-recent-action-undo) <br>
    * [Redo Command](https://github.com/CS2103AUG2016-T13-C3/main/blob/master/docs/UserGuide.md#redo-the-most-recent-action-redo) <br>
