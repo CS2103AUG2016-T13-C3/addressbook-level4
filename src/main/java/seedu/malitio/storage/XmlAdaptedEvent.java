@@ -18,12 +18,14 @@ public class XmlAdaptedEvent {
     @XmlElement(required = true)
     private String name;
 
-
     @XmlElement(required = true)
     private String start;
     
     @XmlElement(required = true)
     private String end;
+    
+    @XmlElement(required = true)
+    private boolean marked; 
     
     @XmlElement
     private List<XmlAdaptedTag> tagged = new ArrayList<>();
@@ -43,6 +45,7 @@ public class XmlAdaptedEvent {
         name = source.getName().fullName;
         start = source.getStart().toString();
         end = source.getEnd().toString();
+        marked = source.isMarked();
         tagged = new ArrayList<>();
         for (Tag tag : source.getTags()) {
             tagged.add(new XmlAdaptedTag(tag));
@@ -62,7 +65,8 @@ public class XmlAdaptedEvent {
         final Name name = new Name(this.name);
         final DateTime start = new DateTime(this.start);
         final DateTime end = new DateTime(this.end);
+        final boolean marked = this.marked;
         final UniqueTagList tags = new UniqueTagList(taskTags);
-            return new Event(name, start, end, tags);
+            return new Event(name, start, end, marked, tags);
     }
 }

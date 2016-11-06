@@ -41,7 +41,6 @@ public class Event implements ReadOnlyEvent {
        this.end = end;
        this.marked = marked;
        this.tags = tags;
-       this.marked = false;
     }
 	
     /**
@@ -49,8 +48,7 @@ public class Event implements ReadOnlyEvent {
      * @throws IllegalValueException 
      */
     public Event(ReadOnlyEvent source) throws IllegalValueException {
-        this(source.getName(), source.getStart(), source.getEnd(), source.getTags());
-        this.marked = source.isMarked();
+        this(source.getName(), source.getStart(), source.getEnd(), source.isMarked(), source.getTags());
     }
 
     @Override
