@@ -93,9 +93,10 @@ Examples:
 
 <!--- @@author a0126633j --->
 #### Finding tasks: `find`
-Finds all input entries specified by the type (deadlines/ floating tasks/ events) whose names or tags is a substring of the given keywords.<br>
+Finds from the last shown lists, specified by the type (deadlines/ floating tasks/ events) whose names or tags is a substring of the given keywords.<br>
 Find DD-MMM-YYY also returns deadlines/events on the specified date time.
 If the type is not specified, all entries containing the keyword will be displayed. <br>
+Multiple finds in a row results in find within a find (refer to last example) <br>
 Format: `find [f|d|e] KEYWORD  [MORE KEYWORDS]`
 
 > * The search is case insensitive.
@@ -107,13 +108,15 @@ Format: `find [f|d|e] KEYWORD  [MORE KEYWORDS]`
 
 Examples: 
 * `find f work`<br>
-  Returns `workout with mom` in floating task list
+  Returns `workout with mom` in current floating task list
 * `find d lunch`<br>
-  Returns `lunch with mom` in deadlines list 
-* `find e 31-Oct`<br>
+  Returns `lunch with mom` in current deadlines list 
+* `listall` followed by `find e 31-Oct`<br>
   Returns all events that has start or end date as `31-Oct`
 * `find lunch dinner breakfast`<br>
-  Returns all tasks having names `lunch`, `dinner`, or `breakfast`
+  Returns all tasks in the current list having names `lunch`, `dinner`, or `breakfast`
+* `find dance` followed by `find studio`
+   Returns all tasks in current lists having names `dance` AND `studio`
 
 
 #### Deleting a task : `delete`
