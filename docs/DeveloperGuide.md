@@ -154,7 +154,9 @@ The `Model`,
   so that the UI automatically updates when the data in any of the list change.
 * exposes the two stacks of InputHistory (history and future) for access by UndoCommand and RedoCommand.
 * does not depend on any of the other three components.
-<!--- @@author --->
+<!--- @@author--->
+
+<!--- @@author a0126633j --->
 ### Storage component
 
 <img src="images/StorageClassDiagram.png" width="800"><br>
@@ -164,6 +166,7 @@ The `Model`,
 The `Storage` component,
 * can save `UserPref` objects in json format and read it back.
 * can save the Malitio data in xml format and read it back.
+<!--- @@author--->
 
 ### Common classes
 
