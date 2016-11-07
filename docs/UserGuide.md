@@ -86,11 +86,6 @@ Format: `listall`
 
 > List all the task from beginning of time
 
-Examples: 
-
-* `listall`<br>
-  List all the task from beginning of time in Malitio.  
-
 <!--- @@author a0126633j --->
 #### Finding tasks: `find`
 Finds from the last shown lists, specified by the type (deadlines/ floating tasks/ events) whose names or tags is a substring of the given keywords.<br>
@@ -125,7 +120,7 @@ Deletes the specified task from lists.<br>
 Format: `delete INDEX`
 
 > Deletes the task at the specified `INDEX`. 
-  The index **must have either 'f','d' or 'e' as a prefix and also a positive integer** f1, e2, d3, ...<br>
+  The index **must have either 'f','d' or 'e' as a prefix and also a positive integer** eg. f1, e2, d3, ...<br>
 
 Examples: 
 * `delete e2`<br>
@@ -140,16 +135,16 @@ Examples:
 
 #### Edit a task : `edit`
 Edits the specified task from the to-do list.<br>
-Edit Floating Task Format: `edit 'f'INDEX [TASK_NAME] [t/TAG]`<br>
-Edit Deadline Format: `edit 'd'INDEX [TASK_NAME] [by DATE/TIME] [t/TAG]` <br>
-Edit Event Format `edit 'e'INDEX [TASK_NAME] [start DATE/TIME] [end DATE/TIME]` <br>
+Edit Floating Task Format: `edit INDEX [TASK_NAME] [t/TAG]`<br>
+Edit Deadline Format: `edit INDEX [TASK_NAME] [by DATE/TIME] [t/TAG]` <br>
+Edit Event Format `edit INDEX [TASK_NAME] [start DATE/TIME] [end DATE/TIME]` <br>
 To remove all tags from a task, use the parameter: t/null <br>
 Note: TASK_NAME cannot contain any of the following key words: "by", "start" and "end".<br>
 
 
 > * Edits the task at the specified `INDEX` with the given one or more parameters.
 > *  The index refers to the index number shown in the most recent listing.<br>
-> *  The index **must have either 'f','d' or 'e' as a prefix and also a positive integer** f1, e2, d3, ...<br>
+> *  The index **must have either 'f','d' or 'e' as a prefix and also a positive integer** eg. f1, e2, d3, ...<br>
 > *  At least one of the optional parameters must be present <br>
 > *  The prefix is not case sensitive. <br>
 > *  The edit function can only edit the details within the same type of task. <br>
@@ -166,8 +161,8 @@ Examples:
 
 <!--- @@author A0122460W --->
 #### Completing a floating task or deadline: `complete`
-complete the specified floating task or deadline from Malitio by striking out them.<br>
-Format: `complete f/d+INDEX`
+Complete the specified floating task or deadline from Malitio by striking out them.<br>
+Format: `complete INDEX`
 
 > Complete the floating task or deadline at the specified `INDEX`. 
   The index refers to the index number shown in the most recent listing.<br>
@@ -181,8 +176,8 @@ Examples:
   Complete the 1st deadline in Malitio.
   
 #### Uncompleting a floating task or deadline: `uncomplete`
-complete the specified floating task or deadline from Malitio by unstriking out them.<br>
-Format: `uncomplete f/d+INDEX`
+Uncomplete the specified floating task or deadline from Malitio by unstriking out them.<br>
+Format: `uncomplete INDEX`
 
 > Uncomplete the floating task or deadline at the specified `INDEX`. 
   The index refers to the index number shown in the most recent listing.<br>
@@ -191,22 +186,24 @@ Format: `uncomplete f/d+INDEX`
 Examples: 
 
 * `uncomplete f2`<br>
-  Complete the 2nd floating task in Malitio.  
+  Uncomplete the 2nd floating task in Malitio.  
 * `uncomplete d1`<br>
-  Complete the 1st deadline in Malitio.
+  Uncomplete the 1st deadline in Malitio.
 
 <!--- @@author A0153006W --->
 
 #### Marking as priority : `mark`
-Marks the specified task in the to-do list <br>
+Mark the specified task in the to-do list <br>
 Format: `mark INDEX`
+>  The index **must have either 'f','d' or 'e' as a prefix and also a positive integer** eg. f1, e2, d3, ...<br>
 
 Examples:
 * `mark f1`
 
 #### Marking as priority : `unmark`
-Unmarks the specified task in the to-do list <br>
+Unmark the specified task in the to-do list <br>
 Format: `unmark INDEX`
+>  The index **must have either 'f','d' or 'e' as a prefix and also a positive integer** eg. f1, e2, d3, ...<br>
 
 Examples:
 * `unmark f1`
@@ -275,15 +272,15 @@ Command | Format
 ------- | :------- 
 Add	| `add TASK_NAME [by DATE/TIME] [start DATE/TIME end DATE/TIME] [t/TAG]...`
 Clear 	| `clear [expired]`
-Delete  | `delete [f|d|e]INDEX`
+Delete  | `delete INDEX`
 Find 	| `find [f|d|e] KEYWORD [MORE_KEYWORDS]`
 List 	| `list`
 Listall 	| `listall`
-Edit 	| `edit [f|d|e]INDEX [NAME] [by DATE/TIME] [start DATE/TIME] [end DATE/TIME] [t/TAG]...`
-Complete| `complete [f|d]INDEX`
-Uncomplete| `uncomplete [f|d]INDEX`
-Mark 	| `mark [f|d|e]INDEX`
-Unmark 	| `unmark [f|d|e]INDEX`
+Edit 	| `edit INDEX [NAME] [by DATE/TIME] [start DATE/TIME] [end DATE/TIME] [t/TAG]...`
+Complete| `complete INDEX`
+Uncomplete| `uncomplete INDEX`
+Mark 	| `mark INDEX`
+Unmark 	| `unmark INDEX`
 Help 	| `help`
 Undo 	| `undo`
 Redo 	| `redo`
