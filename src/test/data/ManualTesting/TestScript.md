@@ -1,10 +1,16 @@
 **Loading the data into Malitio**
 
-1. Download malitio and startup the application by double clicking on it. A folder named &quot;data&quot; should be created in the same place malitio is saved.
+1. Download Malitio's latest jar release, malitio.jar and SampleData.xml file in \src\test\data\ManualTesting\
 
-2. Replace the data inside with the sample data by copy and paste (replace existing).
+2. Create a folder named 'data' in the same folder where malitio.jar is located. Rename SampleData.xml to malitio.xml.
 
-3. Restart malitio and it will be loaded with the sample data
+3. Place SampleData.xml in the newly created 'data' folder.
+
+4. Rename SampleData(XML file) to malitio.
+
+5. Check: You should have malitio.jar file and 'data' folder in the same location. 'data' folder should contain malitio.xml file
+
+5. Start malitio.jar and it will be loaded with the sample data
 
 Input :
 
