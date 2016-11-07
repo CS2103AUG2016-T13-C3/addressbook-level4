@@ -530,7 +530,7 @@ Input : **clear expired**
 
 Expected : Malitio has been cleared!
 
-UI: 13 tasks in to-do list, 15 tasks in deadlines list, and 11 tasks in schedule
+UI: 13 tasks in to-do list, 16 tasks in deadlines list, and 11 tasks in schedule
 
 Input: **listall**
 
