@@ -1,13 +1,13 @@
 package seedu.malitio.logic.commands;
 
 import java.util.Set;
+  //@@author a0126633j
 
 /**
  * Finds and lists tasks from the last shown list whose name or tags or date/time contains any of the argument keywords.
  * Keyword matching is case insensitive.
  */
 public class FindCommand extends Command {
-  //@@author a0126633j
     public static final String COMMAND_WORD = "find";
     
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds [specified] tasks whose names contain any of "
