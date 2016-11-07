@@ -428,9 +428,6 @@ public class ModelManager extends ComponentManager implements Model {
 
     interface Qualifier {
         boolean run(Object task);
-        boolean run(ReadOnlyFloatingTask task);
-        boolean run(ReadOnlyDeadline task);
-        boolean run(ReadOnlyEvent task);
         String toString();
     }
         
@@ -484,23 +481,7 @@ public class ModelManager extends ComponentManager implements Model {
                
            }
         //@@author
-
-        @Override
-        public boolean run(ReadOnlyFloatingTask task) {
-            return false;
-        }
-
-        @Override
-        public boolean run(ReadOnlyDeadline task) {
-            return false;
-        }
-
-        @Override
-        public boolean run(ReadOnlyEvent task) {
-            return false;
-        }
         
-
         @Override
         public String toString() {
             return "name=" + String.join(", ", nameKeyWords);
@@ -515,12 +496,10 @@ public class ModelManager extends ComponentManager implements Model {
             this.timeKeyWord = timeKeyWord;
         }
 
-        @Override
         public boolean run(ReadOnlyFloatingTask task) {
             return false;
         }
 
-        @Override
         public boolean run(ReadOnlyDeadline deadline) {
             if (timeKeyWord.compareTo(deadline.getDue()) <= 0) {
                 return true;
@@ -529,7 +508,6 @@ public class ModelManager extends ComponentManager implements Model {
             }
         }
 
-        @Override
         public boolean run(ReadOnlyEvent event) {
             if (timeKeyWord.compareTo(event.getStart()) <= 0) {
                 return true;
