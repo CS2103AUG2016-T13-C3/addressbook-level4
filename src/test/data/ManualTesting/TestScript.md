@@ -20,9 +20,13 @@ help: Shows program usage instructions.
 
 Example: help
 
+UI : Command Box becomes red
+
 Input : **saufi**
 
 Expected : Unknown command
+
+UI : Command Box becomes red
 
 (Press esc key to clear command box)
 
@@ -30,9 +34,13 @@ Input : **redo**
 
 Expected : no action to redo!
 
+UI : Command Box is cleared
+
 Input : **undo**
 
 Expected : no action to undo!
+
+UI : Command Box is cleared
 
 **Add Command**
 
@@ -127,7 +135,7 @@ UI : Card E9 revert back to friend 21st birthday celebration
 
 **Delete Command**
 
-&lt;!- Invalid arguments --&gt;
+<!-- Invalid arguments -->
 
 Input : **delete**
 
@@ -147,7 +155,7 @@ Expected : The task index provided is invalid
 
 UI : Command Box becomes red
 
-&lt;!- Valid arguments --&gt;
+<!--- Valid arguments -->
 
 Input : **delete f2**
 
@@ -275,31 +283,31 @@ Input :   **edit e3 end 5 dec 9am**
 
 Expected : Event must start before it ends!
 
-UI : Not changed
+UI : Command Box becomes red
 
 Input : **edit e3 start 10 dec 8pm**
 
 Expected : Event must start before it ends!
 
-UI :Not changed
+UI : Command Box becomes red
 
 Input : **edit e3 by today**
 
 Expected : Changing of task type not supported. Please do not use key words (by, start, end) in names
 
-UI : Not changed
+UI : Command Box becomes red
 
 Input : **edit d3 end tomorrow start today**
 
 Expected : Changing of task type not supported. Please do not use key words (by, start, end) in names
 
-UI : Not changed
+UI : Command Box becomes red
 
 Input : **edit f1 by today**
 
 Expected : Changing of task type not supported. Please do not use key words (by, start, end) in names
 
-UI : Not changed
+UI : Command Box becomes red
 
 Input : **edit e0 a**
 
@@ -363,13 +371,13 @@ UI : the deadline that is in red disappears from view, command box cleared
 
 Input: **undo**
 
-Expected : Undo clear successful
+Expected : Undo complete successful
 
 UI : The task reappear at index D1 and colored red, command box cleared
 
 Input: **redo**
 
-Expected : Redo clear successful
+Expected : Redo complete successful
 
 UI : the deadline that is in red disappears from view, command box cleared
 
@@ -407,13 +415,13 @@ UI : Everything in the box is un-grayed out and the name is not striked out at i
 
 Input: **undo**
 
-Expected : Undo clear successful
+Expected : Undo uncomplete successful
 
 UI : Everything in the box is grayed out and the name is striked out at index F1, command box cleared
 
 Input: **redo**
 
-Expected : Redo clear successful
+Expected : Redo uncomplete successful
 
 UI : Everything in the box is un-grayed out and the name is striked out at index F1, command box cleared
 
@@ -461,13 +469,13 @@ The deadline is back to the list and it is colored red, command box cleared
 
 Input: **undo**
 
-Expected : Undo clear successful
+Expected : Undo uncomplete successful
 
 UI : The deadline at index D1 disappears, command box cleared
 
 Input: **redo**
 
-Expected : Redo clear successful
+Expected : Redo uncomplete successful
 
 UI : the deadline appears at D1 and colored red, command box cleared
 
@@ -534,6 +542,8 @@ Input: **undo**
 
 Expected : Undo clear successful
 
+UI: Does not change
+
 Input : **clear**
 
 Expected : Malitio has been cleared!
@@ -544,13 +554,19 @@ Input: **undo**
 
 Expected : Undo clear successful
 
+UI: Lists get populated
+
 Input: **redo**
 
 Expected : Redo clear successful
 
+UI: Empty lists
+
 Input: **undo**
 
 Expected : Undo clear successful
+
+UI: Lists get populated
 
 **Mark Command**
 
@@ -840,7 +856,7 @@ UI: Command Box becomes red
  
 Input : **save data**
 
-Expected : The directory is invalid! Valid file paths must end with &#39;/&#39; or &#39;\&#39;
+Expected : The directory is invalid! Valid file paths must end with '/' or '\'
 
 Example: C://Users/User PC/Downloads/
 
