@@ -86,16 +86,16 @@ interface and exposes its functionality using the `LogicManager.java` class.<br>
 <img src="images/LogicClassDiagram.png" width="800"><br>
 
 The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `delete 3`.
+command `delete f1`.
 
-<img src="images\SDforDeletePerson.png" width="800">
+<img src="images/SDforDeletePerson.png" width="800">
 
 >Note how the `Model` simply raises a `malitioChangedEvent` when the malitio data are changed,
  instead of asking the `Storage` to save the updates to the hard disk.
 
 The diagram below shows how the `EventsCenter` reacts to that event, which eventually results in the updates
 being saved to the hard disk and the status bar of the UI being updated to reflect the 'Last Updated' time. <br>
-<img src="images\SDforDeletePersonEventHandling.png" width="800">
+<img src="images/SDforDeletePersonEventHandling.png" width="800">
 
 > Note how the event is propagated through the `EventsCenter` to the `Storage` and `UI` without `Model` having
   to be coupled to either of them. This is an example of how this Event Driven approach helps us reduce direct 
@@ -154,7 +154,7 @@ The `Model`,
   so that the UI automatically updates when the data in any of the list change.
 * exposes the two stacks of InputHistory (history and future) for access by UndoCommand and RedoCommand.
 * does not depend on any of the other three components.
-
+<!--- @@author --->
 ### Storage component
 
 <img src="images/StorageClassDiagram.png" width="800"><br>
@@ -348,8 +348,6 @@ Use case ends.
 2. Should be able to hold up to 1000 floating tasks, events and deadlines combined.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
-
-{More to be added}
 
 ## Appendix D : Glossary
 
